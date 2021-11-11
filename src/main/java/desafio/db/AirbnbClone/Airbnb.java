@@ -1,7 +1,10 @@
 package desafio.db.AirbnbClone;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+@Entity
 public class Airbnb {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -17,10 +20,10 @@ public class Airbnb {
 	
 	protected Airbnb() {}
 	
-	public Airbnb(Long id, String nomeHospedagem, int hospedes, int quartos, int camas, int banheiros, boolean wifi,
+	public Airbnb(String nomeHospedagem, int hospedes, int quartos, int camas, int banheiros, boolean wifi,
 			boolean arCondicionado, boolean piscina) {
 		super();
-		this.id = id;
+		
 		this.nomeHospedagem = nomeHospedagem;
 		this.hospedes = hospedes;
 		this.quartos = quartos;
