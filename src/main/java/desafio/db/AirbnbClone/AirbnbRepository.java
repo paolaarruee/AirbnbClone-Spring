@@ -1,5 +1,10 @@
 package desafio.db.AirbnbClone;
 
-public class AirbnbRepository {
+import org.springframework.data.repository.CrudRepository;
 
+
+public interface AirbnbRepository  extends CrudRepository<Airbnb, Long> {
+
+	Airbnb findByNomeHospedagem(String nomeHospedagem);
+	
 }
