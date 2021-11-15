@@ -10,6 +10,8 @@ public class Airbnb {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	private String nomeHospedagem;
+	private String imagem;
+	private double valor;
 	private int hospedes;
 	private int quartos;
 	private int camas;
@@ -20,11 +22,13 @@ public class Airbnb {
 	
 	protected Airbnb() {}
 	
-	public Airbnb(String nomeHospedagem, int hospedes, int quartos, int camas, int banheiros, boolean wifi,
+	public Airbnb(String nomeHospedagem,String imagem ,double valor,int hospedes, int quartos, int camas, int banheiros, boolean wifi,
 			boolean arCondicionado, boolean piscina) {
 		super();
 		
 		this.nomeHospedagem = nomeHospedagem;
+		this.imagem = imagem;
+		this.valor = valor;
 		this.hospedes = hospedes;
 		this.quartos = quartos;
 		this.camas = camas;
@@ -44,7 +48,14 @@ public class Airbnb {
 	public String getNomeHospedagem() {
 		return nomeHospedagem;
 	}
+	
+	public double getValor() {
+		return valor;
+	}
 
+	public String getImagem() {
+		return imagem;
+	}
 
 	public int getHospedes() {
 		return hospedes;
@@ -86,14 +97,17 @@ public class Airbnb {
 		return piscina;
 	}
 
-
 	@Override
 	public String toString() {
-		return "Airbnb [id=" + id + ", nomeHospedagem=" + nomeHospedagem + ", hospedes=" + hospedes + ", quartos="
-				+ quartos + ", camas=" + camas + ", banheiros=" + banheiros + ", wifi=" + wifi + ", arCondicionado="
-				+ arCondicionado + ", piscina=" + piscina + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
+		return "Airbnb [id=" + id + ", nomeHospedagem=" + nomeHospedagem + ", imagem=" + imagem + ", valor=" + valor
+				+ ", hospedes=" + hospedes + ", quartos=" + quartos + ", camas=" + camas + ", banheiros=" + banheiros
+				+ ", wifi=" + wifi + ", arCondicionado=" + arCondicionado + ", piscina=" + piscina + "]";
 	}
+
+	
+
+
+
 	
 	
 }
