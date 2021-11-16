@@ -8,7 +8,7 @@ import javax.persistence.Id;
 public class Airbnb {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long id;
+	private long id;
 	private String nomeHospedagem;
 	private String imagem;
 	private double valor;
@@ -39,7 +39,7 @@ public class Airbnb {
 	}
 
 
-	public Long getId() {
+	public long getId() {
 		return id;
 	}
 

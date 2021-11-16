@@ -5,10 +5,7 @@ import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 
 
-public interface AirbnbRepository  extends CrudRepository<Airbnb, Long> {
-
-	Airbnb findByNomeHospedagem(String nomeHospedagem);
-        
+public interface AirbnbRepository  extends CrudRepository<Airbnb, List<Airbnb>> {
+    Airbnb findById(long id);    
 	List<Airbnb>findAll();
-	
 }

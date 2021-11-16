@@ -10,19 +10,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
+@CrossOrigin
 @RestController
 public class AirbnbController {
 	
 	@Autowired
 	private AirbnbRepository repository;
-	@CrossOrigin
-	@RequestMapping(value = "/{nomeHospedagem}", method = RequestMethod.GET, produces = "application/json")
-	public ResponseEntity<Airbnb> getNomeHospedagem(@PathVariable("nomeHospedagem") String nomeHospedagem) {
-		Airbnb nome = repository.findByNomeHospedagem(nomeHospedagem);
-		return new ResponseEntity<Airbnb>(nome, HttpStatus.OK);
-	}
-	@CrossOrigin
+	
 	@RequestMapping(value = "", method = RequestMethod.GET, produces = "application/json")
 	public ResponseEntity<List<Airbnb>> findAll() {
 		List<Airbnb> todos = this.repository.findAll();
@@ -32,6 +26,10 @@ public class AirbnbController {
 		return new ResponseEntity<List<Airbnb>>(todos, HttpStatus.OK);
 	}
 	
-	
+	@RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json")
+	public ResponseEntity<Airbnb> getId(@PathVariable("id") long id) {
+		Airbnb nome = repository.findById(id);
+		return new ResponseEntity<Airbnb>(nome, HttpStatus.OK);
+	}
 	
 }
