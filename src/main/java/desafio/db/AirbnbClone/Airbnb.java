@@ -19,11 +19,12 @@ public class Airbnb {
 	private boolean wifi;
 	private boolean arCondicionado;
 	private boolean piscina;
+	private String descricao;
 	
 	protected Airbnb() {}
 	
 	public Airbnb(String nomeHospedagem,String imagem ,double valor,int hospedes, int quartos, int camas, int banheiros, boolean wifi,
-			boolean arCondicionado, boolean piscina) {
+			boolean arCondicionado, boolean piscina, String descricao) {
 		super();
 		
 		this.nomeHospedagem = nomeHospedagem;
@@ -36,8 +37,9 @@ public class Airbnb {
 		this.wifi = wifi;
 		this.arCondicionado = arCondicionado;
 		this.piscina = piscina;
+		this.descricao = descricao;
 	}
-
+	
 
 	public long getId() {
 		return id;
@@ -96,13 +98,18 @@ public class Airbnb {
 	public boolean isPiscina() {
 		return piscina;
 	}
+	public String getDescricao() {
+		return descricao;
+	}
 
 	@Override
 	public String toString() {
 		return "Airbnb [id=" + id + ", nomeHospedagem=" + nomeHospedagem + ", imagem=" + imagem + ", valor=" + valor
 				+ ", hospedes=" + hospedes + ", quartos=" + quartos + ", camas=" + camas + ", banheiros=" + banheiros
-				+ ", wifi=" + wifi + ", arCondicionado=" + arCondicionado + ", piscina=" + piscina + "]";
+				+ ", wifi=" + wifi + ", arCondicionado=" + arCondicionado + ", piscina=" + piscina + ", descricao="
+				+ descricao + "]";
 	}
+
 
 	
 
