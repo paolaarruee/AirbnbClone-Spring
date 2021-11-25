@@ -1,4 +1,4 @@
-package desafio.db.AirbnbClone;
+package desafio.db.AirbnbClone.Class;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

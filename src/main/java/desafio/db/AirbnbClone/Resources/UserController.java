@@ -1,4 +1,4 @@
-package desafio.db.AirbnbClone;
+package desafio.db.AirbnbClone.Resources;
 
 import java.io.IOException;
 import java.util.List;
@@ -15,12 +15,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin
+import desafio.db.AirbnbClone.Class.User;
+import desafio.db.AirbnbClone.Repository.UserRepository;
+
+
+
+@CrossOrigin(exposedHeaders = "errors, content-type")
+@RequestMapping("/user/")
 @RestController
 public class UserController {
 	
 	@Autowired
-	private UserRepository users;
+   private UserRepository users;
 	
 	@RequestMapping(value = "/users", method = RequestMethod.GET, produces = "application/json")
 	public ResponseEntity<List<User>> findAll() throws ClassNotFoundException, IOException {

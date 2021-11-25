@@ -1,6 +1,7 @@
-package desafio.db.AirbnbClone;
+/*package desafio.db.AirbnbClone;
 
 import java.io.*;
+
 
 public class UserStore implements Serializable {
 
@@ -35,3 +36,4 @@ public class UserStore implements Serializable {
 	  }
 	
 }
+*/
