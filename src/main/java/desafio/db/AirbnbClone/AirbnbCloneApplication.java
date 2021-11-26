@@ -5,6 +5,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import desafio.db.AirbnbClone.Class.Airbnb;
+import desafio.db.AirbnbClone.Repository.AirbnbRepository;
+/* authors: Erico, Paola,Danieli , Stefany e Artur*/
 
 
 @SpringBootApplication
