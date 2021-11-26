@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import desafio.db.AirbnbClone.Class.Airbnb;
 import desafio.db.AirbnbClone.Repository.AirbnbRepository;
 @CrossOrigin(exposedHeaders = "errors, content-type")
-@RequestMapping("/hospedagem/")
+@RequestMapping("/hospedagem")
 @RestController
 public class AirbnbController {
 	
