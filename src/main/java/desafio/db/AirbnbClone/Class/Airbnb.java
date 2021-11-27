@@ -6,6 +6,10 @@ import javax.persistence.Id;
 
 @Entity
 public class Airbnb {
+	public void setId(long id) {
+		this.id = id;
+	}
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
